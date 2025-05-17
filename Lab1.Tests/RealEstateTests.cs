@@ -3,20 +3,19 @@ namespace Lab1.Tests
     public class RealEstateTests
     {
        
-
         [Theory]
         [InlineData(-1)]
         public void Constructor_InvalidFloor_ThrowsArgumentException2(int floor)
         {
             int area = 50;
             int rooms = 2;
-            string propertyType = "квартира";
-            string condition = "новое";
-            string location = "центр";
+            string propertyType = "ГЄГўГ Г°ГІГЁГ°Г ";
+            string condition = "Г­Г®ГўГ®ГҐ";
+            string location = "Г¶ГҐГ­ГІГ°";
 
             var exception = Assert.Throws<ArgumentException>(() =>
                 new RealEstate(area, rooms, floor, propertyType, condition, location));
-            Assert.Equal("Некорректный этаж.", exception.Message);
+            Assert.Equal("ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г»Г© ГЅГІГ Г¦.", exception.Message);
         }
 
         [Theory]
@@ -25,13 +24,13 @@ namespace Lab1.Tests
         {
             int area = 50;
             int floor = 1;
-            string propertyType = "квартира";
-            string condition = "новое";
-            string location = "центр";
+            string propertyType = "ГЄГўГ Г°ГІГЁГ°Г ";
+            string condition = "Г­Г®ГўГ®ГҐ";
+            string location = "Г¶ГҐГ­ГІГ°";
 
             var exception = Assert.Throws<ArgumentException>(() =>
                 new RealEstate(area, rooms, floor, propertyType, condition, location));
-            Assert.Equal("Некорректное количество комнат.", exception.Message);
+            Assert.Equal("ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г®ГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЄГ®Г¬Г­Г ГІ.", exception.Message);
         }
 
         [Theory]
@@ -40,45 +39,45 @@ namespace Lab1.Tests
         {
             int rooms = 2;
             int floor = 1;
-            string propertyType = "квартира";
-            string condition = "новое";
-            string location = "центр";
+            string propertyType = "ГЄГўГ Г°ГІГЁГ°Г ";
+            string condition = "Г­Г®ГўГ®ГҐ";
+            string location = "Г¶ГҐГ­ГІГ°";
 
             var exception = Assert.Throws<ArgumentException>(() =>
                 new RealEstate(area, rooms, floor, propertyType, condition, location));
-            Assert.Equal("Некорректная площадь.", exception.Message);
+            Assert.Equal("ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г Гї ГЇГ«Г®Г№Г Г¤Гј.", exception.Message);
         }
 
         [Theory]
-        [InlineData("дача")]
+        [InlineData("Г¤Г Г·Г ")]
         [InlineData("")]
         public void Constructor_InvalidPropertyType_ThrowsArgumentException2(string propertyType)
         {
             int area = 50;
             int rooms = 2;
             int floor = 1;
-            string condition = "новое";
-            string location = "центр";
+            string condition = "Г­Г®ГўГ®ГҐ";
+            string location = "Г¶ГҐГ­ГІГ°";
 
             var exception = Assert.Throws<ArgumentException>(() =>
                 new RealEstate(area, rooms, floor, propertyType, condition, location));
-            Assert.Equal("Некорректный тип недвижимости.", exception.Message);
+            Assert.Equal("ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г»Г© ГІГЁГЇ Г­ГҐГ¤ГўГЁГ¦ГЁГ¬Г®Г±ГІГЁ.", exception.Message);
         }
 
         [Theory]
-        [InlineData("лесополоса")]
+        [InlineData("Г«ГҐГ±Г®ГЇГ®Г«Г®Г±Г ")]
         [InlineData("")]
         public void Constructor_InvalidLocation_ThrowsArgumentException2(string location)
         {
             int area = 50;
             int rooms = 2;
             int floor = 1;
-            string propertyType = "квартира";
-            string condition = "новое";
+            string propertyType = "ГЄГўГ Г°ГІГЁГ°Г ";
+            string condition = "Г­Г®ГўГ®ГҐ";
 
             var exception = Assert.Throws<ArgumentException>(() =>
                 new RealEstate(area, rooms, floor, propertyType, condition, location));
-            Assert.Equal("Некорректное расположение.", exception.Message);
+            Assert.Equal("ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г®ГҐ Г°Г Г±ГЇГ®Г«Г®Г¦ГҐГ­ГЁГҐ.", exception.Message);
         }
 
         //
@@ -89,13 +88,13 @@ namespace Lab1.Tests
         {
             int rooms = 2;
             int floor = 1;
-            string propertyType = "квартира";
-            string condition = "новое";
-            string location = "центр";
+            string propertyType = "ГЄГўГ Г°ГІГЁГ°Г ";
+            string condition = "Г­Г®ГўГ®ГҐ";
+            string location = "Г¶ГҐГ­ГІГ°";
 
             var exception = Assert.Throws<ArgumentException>(() =>
                 new RealEstate(area, rooms, floor, propertyType, condition, location));
-            Assert.Equal("Некорректная площадь.", exception.Message);
+            Assert.Equal("ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г Гї ГЇГ«Г®Г№Г Г¤Гј.", exception.Message);
         }
 
         
@@ -107,13 +106,13 @@ namespace Lab1.Tests
         {
             int area = 50;
             int floor = 1;
-            string propertyType = "квартира";
-            string condition = "новое";
-            string location = "центр";
+            string propertyType = "ГЄГўГ Г°ГІГЁГ°Г ";
+            string condition = "Г­Г®ГўГ®ГҐ";
+            string location = "Г¶ГҐГ­ГІГ°";
 
             var exception = Assert.Throws<ArgumentException>(() =>
                 new RealEstate(area, rooms, floor, propertyType, condition, location));
-            Assert.Equal("Некорректное количество комнат.", exception.Message);
+            Assert.Equal("ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г®ГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЄГ®Г¬Г­Г ГІ.", exception.Message);
         }
 
         [Theory]
@@ -123,70 +122,70 @@ namespace Lab1.Tests
         {
             int area = 50;
             int rooms = 2;
-            string propertyType = "квартира";
-            string condition = "новое";
-            string location = "центр";
+            string propertyType = "ГЄГўГ Г°ГІГЁГ°Г ";
+            string condition = "Г­Г®ГўГ®ГҐ";
+            string location = "Г¶ГҐГ­ГІГ°";
 
             var exception = Assert.Throws<ArgumentException>(() =>
                 new RealEstate(area, rooms, floor, propertyType, condition, location));
-            Assert.Equal("Некорректный этаж.", exception.Message);
+            Assert.Equal("ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г»Г© ГЅГІГ Г¦.", exception.Message);
         }
 
         [Theory]
-        [InlineData("офис")]
+        [InlineData("Г®ГґГЁГ±")]
         [InlineData("")]
         public void Constructor_InvalidPropertyType_ThrowsArgumentException(string propertyType)
         {
             int area = 50;
             int rooms = 2;
             int floor = 1;
-            string condition = "новое";
-            string location = "центр";
+            string condition = "Г­Г®ГўГ®ГҐ";
+            string location = "Г¶ГҐГ­ГІГ°";
 
             var exception = Assert.Throws<ArgumentException>(() =>
                 new RealEstate(area, rooms, floor, propertyType, condition, location));
-            Assert.Equal("Некорректный тип недвижимости.", exception.Message);
+            Assert.Equal("ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г»Г© ГІГЁГЇ Г­ГҐГ¤ГўГЁГ¦ГЁГ¬Г®Г±ГІГЁ.", exception.Message);
         }
 
         [Theory]
-        [InlineData("старое")]
+        [InlineData("Г±ГІГ Г°Г®ГҐ")]
         [InlineData("")]
         public void Constructor_InvalidCondition_ThrowsArgumentException(string condition)
         {
             int area = 50;
             int rooms = 2;
             int floor = 1;
-            string propertyType = "квартира";
-            string location = "центр";
+            string propertyType = "ГЄГўГ Г°ГІГЁГ°Г ";
+            string location = "Г¶ГҐГ­ГІГ°";
 
             var exception = Assert.Throws<ArgumentException>(() =>
                 new RealEstate(area, rooms, floor, propertyType, condition, location));
-            Assert.Equal("Некорректное состояние объекта.", exception.Message);
+            Assert.Equal("ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г®ГҐ Г±Г®Г±ГІГ®ГїГ­ГЁГҐ Г®ГЎГєГҐГЄГІГ .", exception.Message);
         }
 
         [Theory]
-        [InlineData("лес")]
+        [InlineData("Г«ГҐГ±")]
         [InlineData("")]
         public void Constructor_InvalidLocation_ThrowsArgumentException(string location)
         {
             int area = 50;
             int rooms = 2;
             int floor = 1;
-            string propertyType = "квартира";
-            string condition = "новое";
+            string propertyType = "ГЄГўГ Г°ГІГЁГ°Г ";
+            string condition = "Г­Г®ГўГ®ГҐ";
 
             var exception = Assert.Throws<ArgumentException>(() =>
                 new RealEstate(area, rooms, floor, propertyType, condition, location));
-            Assert.Equal("Некорректное расположение.", exception.Message);
+            Assert.Equal("ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г®ГҐ Г°Г Г±ГЇГ®Г«Г®Г¦ГҐГ­ГЁГҐ.", exception.Message);
         }
 
         [Theory]
-        [InlineData(50, 1, 1, "квартира", "новое", "центр", 1763437.50)]
-        [InlineData(50, 4, 6, "дом", "хорошее", "пригород", 2530000)]
-        [InlineData(50, 3, 5, "студия", "требует ремонта", "отдаленный район", 50 * 25000 * 0.80)]
-        [InlineData(100, 5, 7, "квартира", "новое", "центр", 5218125)]
-        [InlineData(30, 2, 3, "дом", "требует ремонта", "пригород", 30 * 40000 * 0.80)]
-        [InlineData(70, 3, 10, "квартира", "хорошее", "центр", 70 * 30000 * 1.15 * 1.25)]
+        [InlineData(50, 1, 1, "ГЄГўГ Г°ГІГЁГ°Г ", "Г­Г®ГўГ®ГҐ", "Г¶ГҐГ­ГІГ°", 1763437.50)]
+        [InlineData(50, 4, 6, "Г¤Г®Г¬", "ГµГ®Г°Г®ГёГҐГҐ", "ГЇГ°ГЁГЈГ®Г°Г®Г¤", 2530000)]
+        [InlineData(50, 3, 5, "Г±ГІГіГ¤ГЁГї", "ГІГ°ГҐГЎГіГҐГІ Г°ГҐГ¬Г®Г­ГІГ ", "Г®ГІГ¤Г Г«ГҐГ­Г­Г»Г© Г°Г Г©Г®Г­", 50 * 25000 * 0.80)]
+        [InlineData(100, 5, 7, "ГЄГўГ Г°ГІГЁГ°Г ", "Г­Г®ГўГ®ГҐ", "Г¶ГҐГ­ГІГ°", 5218125)]
+        [InlineData(30, 2, 3, "Г¤Г®Г¬", "ГІГ°ГҐГЎГіГҐГІ Г°ГҐГ¬Г®Г­ГІГ ", "ГЇГ°ГЁГЈГ®Г°Г®Г¤", 30 * 40000 * 0.80)]
+        [InlineData(70, 3, 10, "ГЄГўГ Г°ГІГЁГ°Г ", "ГµГ®Г°Г®ГёГҐГҐ", "Г¶ГҐГ­ГІГ°", 70 * 30000 * 1.15 * 1.25)]
         public void CalculatePrice_VariousParameters_ReturnsCorrectPrice(int area, int rooms, int floor, string propertyType, string condition, string location, decimal expectedPrice)
         {
             var realEstate = new RealEstate(area, rooms, floor, propertyType, condition, location);
@@ -226,14 +225,14 @@ namespace Lab1.Tests
 //            // Arrange
 //            int rooms = 2;
 //            int floor = 1;
-//            string propertyType = "квартира";
-//            string condition = "новое";
-//            string location = "центр";
+//            string propertyType = "ГЄГўГ Г°ГІГЁГ°Г ";
+//            string condition = "Г­Г®ГўГ®ГҐ";
+//            string location = "Г¶ГҐГ­ГІГ°";
 
 //            // Act & Assert
 //            var exception = Assert.Throws<ArgumentException>(() =>
 //                new RealEstate(area, rooms, floor, propertyType, condition, location));
-//            Assert.Equal("Некорректная площадь.", exception.Message);
+//            Assert.Equal("ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г Гї ГЇГ«Г®Г№Г Г¤Гј.", exception.Message);
 //        }
 
 //        [Theory]
@@ -243,13 +242,13 @@ namespace Lab1.Tests
 //        {
 //            int area = 50;
 //            int floor = 1;
-//            string propertyType = "квартира";
-//            string condition = "новое";
-//            string location = "центр";
+//            string propertyType = "ГЄГўГ Г°ГІГЁГ°Г ";
+//            string condition = "Г­Г®ГўГ®ГҐ";
+//            string location = "Г¶ГҐГ­ГІГ°";
 
 //            var exception = Assert.Throws<ArgumentException>(() =>
 //                new RealEstate(area, rooms, floor, propertyType, condition, location));
-//            Assert.Equal("Некорректное количество комнат.", exception.Message);
+//            Assert.Equal("ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г®ГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЄГ®Г¬Г­Г ГІ.", exception.Message);
 //        }
 
 //        [Theory]
@@ -259,68 +258,68 @@ namespace Lab1.Tests
 //        {
 //            int area = 50;
 //            int rooms = 2;
-//            string propertyType = "квартира";
-//            string condition = "новое";
-//            string location = "центр";
+//            string propertyType = "ГЄГўГ Г°ГІГЁГ°Г ";
+//            string condition = "Г­Г®ГўГ®ГҐ";
+//            string location = "Г¶ГҐГ­ГІГ°";
 
 //            var exception = Assert.Throws<ArgumentException>(() =>
 //                new RealEstate(area, rooms, floor, propertyType, condition, location));
-//            Assert.Equal("Некорректный этаж.", exception.Message);
+//            Assert.Equal("ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г»Г© ГЅГІГ Г¦.", exception.Message);
 //        }
 
 //        [Theory]
-//        [InlineData("офис")]
+//        [InlineData("Г®ГґГЁГ±")]
 //        [InlineData("")]
 //        public void Constructor_InvalidPropertyType_ThrowsArgumentException(string propertyType)
 //        {
 //            int area = 50;
 //            int rooms = 2;
 //            int floor = 1;
-//            string condition = "новое";
-//            string location = "центр";
+//            string condition = "Г­Г®ГўГ®ГҐ";
+//            string location = "Г¶ГҐГ­ГІГ°";
 
 //            var exception = Assert.Throws<ArgumentException>(() =>
 //                new RealEstate(area, rooms, floor, propertyType, condition, location));
-//            Assert.Equal("Некорректный тип недвижимости.", exception.Message);
+//            Assert.Equal("ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г»Г© ГІГЁГЇ Г­ГҐГ¤ГўГЁГ¦ГЁГ¬Г®Г±ГІГЁ.", exception.Message);
 //        }
 
 //        [Theory]
-//        [InlineData("старое")]
+//        [InlineData("Г±ГІГ Г°Г®ГҐ")]
 //        [InlineData("")]
 //        public void Constructor_InvalidCondition_ThrowsArgumentException(string condition)
 //        {
 //            int area = 50;
 //            int rooms = 2;
 //            int floor = 1;
-//            string propertyType = "квартира";
-//            string location = "центр";
+//            string propertyType = "ГЄГўГ Г°ГІГЁГ°Г ";
+//            string location = "Г¶ГҐГ­ГІГ°";
 
 //            var exception = Assert.Throws<ArgumentException>(() =>
 //                new RealEstate(area, rooms, floor, propertyType, condition, location));
-//            Assert.Equal("Некорректное состояние объекта.", exception.Message);
+//            Assert.Equal("ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г®ГҐ Г±Г®Г±ГІГ®ГїГ­ГЁГҐ Г®ГЎГєГҐГЄГІГ .", exception.Message);
 //        }
 
 //        [Theory]
-//        [InlineData("лес")]
+//        [InlineData("Г«ГҐГ±")]
 //        [InlineData("")]
 //        public void Constructor_InvalidLocation_ThrowsArgumentException(string location)
 //        {
 //            int area = 50;
 //            int rooms = 2;
 //            int floor = 1;
-//            string propertyType = "квартира";
-//            string condition = "новое";
+//            string propertyType = "ГЄГўГ Г°ГІГЁГ°Г ";
+//            string condition = "Г­Г®ГўГ®ГҐ";
 
 //            var exception = Assert.Throws<ArgumentException>(() =>
 //                new RealEstate(area, rooms, floor, propertyType, condition, location));
-//            Assert.Equal("Некорректное расположение.", exception.Message);
+//            Assert.Equal("ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г®ГҐ Г°Г Г±ГЇГ®Г«Г®Г¦ГҐГ­ГЁГҐ.", exception.Message);
 //        }
 
 //        [Theory]
-//        [InlineData(50, 1, 1, "квартира", "новое", "центр", 1763437.50)]
-//        [InlineData(50, 4, 6, "дом", "хорошее", "пригород", 2530000)]
-//        [InlineData(50, 3, 5, "студия", "требует ремонта", "отдаленный район", 50 * 25000 * 0.80)]
-//        [InlineData(100, 5, 7, "квартира", "новое", "центр", 5218125)]
+//        [InlineData(50, 1, 1, "ГЄГўГ Г°ГІГЁГ°Г ", "Г­Г®ГўГ®ГҐ", "Г¶ГҐГ­ГІГ°", 1763437.50)]
+//        [InlineData(50, 4, 6, "Г¤Г®Г¬", "ГµГ®Г°Г®ГёГҐГҐ", "ГЇГ°ГЁГЈГ®Г°Г®Г¤", 2530000)]
+//        [InlineData(50, 3, 5, "Г±ГІГіГ¤ГЁГї", "ГІГ°ГҐГЎГіГҐГІ Г°ГҐГ¬Г®Г­ГІГ ", "Г®ГІГ¤Г Г«ГҐГ­Г­Г»Г© Г°Г Г©Г®Г­", 50 * 25000 * 0.80)]
+//        [InlineData(100, 5, 7, "ГЄГўГ Г°ГІГЁГ°Г ", "Г­Г®ГўГ®ГҐ", "Г¶ГҐГ­ГІГ°", 5218125)]
 //        public void CalculatePrice_VariousParameters_ReturnsCorrectPrice(int area, int rooms, int floor, string propertyType, string condition, string location, decimal expectedPrice)
 //        {
 //            var realEstate = new RealEstate(area, rooms, floor, propertyType, condition, location);
@@ -343,13 +342,13 @@ namespace Lab1.Tests
 //        {
 //            int rooms = 2;
 //            int floor = 1;
-//            string propertyType = "квартира";
-//            string condition = "новое";
-//            string location = "центр";
+//            string propertyType = "ГЄГўГ Г°ГІГЁГ°Г ";
+//            string condition = "Г­Г®ГўГ®ГҐ";
+//            string location = "Г¶ГҐГ­ГІГ°";
 
 //            var exception = Assert.Throws<ArgumentException>(() =>
 //                new RealEstate(area, rooms, floor, propertyType, condition, location));
-//            Assert.Equal("Некорректная площадь.", exception.Message);
+//            Assert.Equal("ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г Гї ГЇГ«Г®Г№Г Г¤Гј.", exception.Message);
 //        }
 
 //        [Theory]
@@ -359,13 +358,13 @@ namespace Lab1.Tests
 //        {
 //            int area = 50;
 //            int floor = 1;
-//            string propertyType = "квартира";
-//            string condition = "новое";
-//            string location = "центр";
+//            string propertyType = "ГЄГўГ Г°ГІГЁГ°Г ";
+//            string condition = "Г­Г®ГўГ®ГҐ";
+//            string location = "Г¶ГҐГ­ГІГ°";
 
 //            var exception = Assert.Throws<ArgumentException>(() =>
 //                new RealEstate(area, rooms, floor, propertyType, condition, location));
-//            Assert.Equal("Некорректное количество комнат.", exception.Message);
+//            Assert.Equal("ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г®ГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЄГ®Г¬Г­Г ГІ.", exception.Message);
 //        }
 
 //        [Theory]
@@ -375,75 +374,75 @@ namespace Lab1.Tests
 //        {
 //            int area = 50;
 //            int rooms = 2;
-//            string propertyType = "квартира";
-//            string condition = "новое";
-//            string location = "центр";
+//            string propertyType = "ГЄГўГ Г°ГІГЁГ°Г ";
+//            string condition = "Г­Г®ГўГ®ГҐ";
+//            string location = "Г¶ГҐГ­ГІГ°";
 
 //            var exception = Assert.Throws<ArgumentException>(() =>
 //                new RealEstate(area, rooms, floor, propertyType, condition, location));
-//            Assert.Equal("Некорректный этаж.", exception.Message);
+//            Assert.Equal("ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г»Г© ГЅГІГ Г¦.", exception.Message);
 //        }
 
 //        [Theory]
-//        [InlineData("офис")]
+//        [InlineData("Г®ГґГЁГ±")]
 //        [InlineData("")]
 //        public void Constructor_InvalidPropertyType_ThrowsArgumentException(string propertyType)
 //        {
 //            int area = 50;
 //            int rooms = 2;
 //            int floor = 1;
-//            string condition = "новое";
-//            string location = "центр";
+//            string condition = "Г­Г®ГўГ®ГҐ";
+//            string location = "Г¶ГҐГ­ГІГ°";
 
 //            var exception = Assert.Throws<ArgumentException>(() =>
 //                new RealEstate(area, rooms, floor, propertyType, condition, location));
-//            Assert.Equal("Некорректный тип недвижимости.", exception.Message);
+//            Assert.Equal("ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г»Г© ГІГЁГЇ Г­ГҐГ¤ГўГЁГ¦ГЁГ¬Г®Г±ГІГЁ.", exception.Message);
 //        }
 
 //        [Theory]
-//        [InlineData("старое")]
+//        [InlineData("Г±ГІГ Г°Г®ГҐ")]
 //        [InlineData("")]
 //        public void Constructor_InvalidCondition_ThrowsArgumentException(string condition)
 //        {
 //            int area = 50;
 //            int rooms = 2;
 //            int floor = 1;
-//            string propertyType = "квартира";
-//            string location = "центр";
+//            string propertyType = "ГЄГўГ Г°ГІГЁГ°Г ";
+//            string location = "Г¶ГҐГ­ГІГ°";
 
 //            var exception = Assert.Throws<ArgumentException>(() =>
 //                new RealEstate(area, rooms, floor, propertyType, condition, location));
-//            Assert.Equal("Некорректное состояние объекта.", exception.Message);
+//            Assert.Equal("ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г®ГҐ Г±Г®Г±ГІГ®ГїГ­ГЁГҐ Г®ГЎГєГҐГЄГІГ .", exception.Message);
 //        }
 
 //        [Theory]
-//        [InlineData("лес")]
+//        [InlineData("Г«ГҐГ±")]
 //        [InlineData("")]
 //        public void Constructor_InvalidLocation_ThrowsArgumentException(string location)
 //        {
 //            int area = 50;
 //            int rooms = 2;
 //            int floor = 1;
-//            string propertyType = "квартира";
-//            string condition = "новое";
+//            string propertyType = "ГЄГўГ Г°ГІГЁГ°Г ";
+//            string condition = "Г­Г®ГўГ®ГҐ";
 
 //            var exception = Assert.Throws<ArgumentException>(() =>
 //                new RealEstate(area, rooms, floor, propertyType, condition, location));
-//            Assert.Equal("Некорректное расположение.", exception.Message);
+//            Assert.Equal("ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г®ГҐ Г°Г Г±ГЇГ®Г«Г®Г¦ГҐГ­ГЁГҐ.", exception.Message);
 //        }
 
 
 //        [Theory]
-//        [InlineData(50, 1, 1, "квартира", "новое", "центр", 1763437.500)]
-//        [InlineData(50, 4, 6, "дом", "хорошее", "пригород", 2530000)]
-//        [InlineData(50, 3, 5, "студия", "требует ремонта", "отдаленный район", 50 * 25000 * 0.80)]
-//        [InlineData(100, 5, 7, "квартира", "новое", "центр", 5218125)]
-//		[InlineData(50, 1, 3, "квартира", "хорошее", "центр", 1781250)]
-//		[InlineData(50, 4, 3, "квартира", "хорошее", "центр", 2062500)]
-//		[InlineData(50, 2, 1, "квартира", "хорошее", "центр", 1687500)]
-//		[InlineData(50, 2, 6, "квартира", "хорошее", "центр", 2156250)]
-//		[InlineData(50, 2, 3, "квартира", "новое", "центр", 2062500)]
-//		[InlineData(50, 2, 3, "квартира", "требует ремонта", "центр", 1500000)]
+//        [InlineData(50, 1, 1, "ГЄГўГ Г°ГІГЁГ°Г ", "Г­Г®ГўГ®ГҐ", "Г¶ГҐГ­ГІГ°", 1763437.500)]
+//        [InlineData(50, 4, 6, "Г¤Г®Г¬", "ГµГ®Г°Г®ГёГҐГҐ", "ГЇГ°ГЁГЈГ®Г°Г®Г¤", 2530000)]
+//        [InlineData(50, 3, 5, "Г±ГІГіГ¤ГЁГї", "ГІГ°ГҐГЎГіГҐГІ Г°ГҐГ¬Г®Г­ГІГ ", "Г®ГІГ¤Г Г«ГҐГ­Г­Г»Г© Г°Г Г©Г®Г­", 50 * 25000 * 0.80)]
+//        [InlineData(100, 5, 7, "ГЄГўГ Г°ГІГЁГ°Г ", "Г­Г®ГўГ®ГҐ", "Г¶ГҐГ­ГІГ°", 5218125)]
+//		[InlineData(50, 1, 3, "ГЄГўГ Г°ГІГЁГ°Г ", "ГµГ®Г°Г®ГёГҐГҐ", "Г¶ГҐГ­ГІГ°", 1781250)]
+//		[InlineData(50, 4, 3, "ГЄГўГ Г°ГІГЁГ°Г ", "ГµГ®Г°Г®ГёГҐГҐ", "Г¶ГҐГ­ГІГ°", 2062500)]
+//		[InlineData(50, 2, 1, "ГЄГўГ Г°ГІГЁГ°Г ", "ГµГ®Г°Г®ГёГҐГҐ", "Г¶ГҐГ­ГІГ°", 1687500)]
+//		[InlineData(50, 2, 6, "ГЄГўГ Г°ГІГЁГ°Г ", "ГµГ®Г°Г®ГёГҐГҐ", "Г¶ГҐГ­ГІГ°", 2156250)]
+//		[InlineData(50, 2, 3, "ГЄГўГ Г°ГІГЁГ°Г ", "Г­Г®ГўГ®ГҐ", "Г¶ГҐГ­ГІГ°", 2062500)]
+//		[InlineData(50, 2, 3, "ГЄГўГ Г°ГІГЁГ°Г ", "ГІГ°ГҐГЎГіГҐГІ Г°ГҐГ¬Г®Г­ГІГ ", "Г¶ГҐГ­ГІГ°", 1500000)]
 //		public void CalculatePrice_VariousParameters_ReturnsCorrectPrice(int area, int rooms, int floor, string propertyType, string condition, string location, decimal expectedPrice)
 //        {
 //            var realEstate = new RealEstate(area, rooms, floor, propertyType, condition, location);
